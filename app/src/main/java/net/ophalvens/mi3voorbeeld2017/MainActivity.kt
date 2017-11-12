@@ -66,7 +66,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                         try {
                             tArray = response.getJSONArray("data")
                             for (i in 0 until tArray!!.length()) {
-                                //ts.append(response.getJSONObject(""+i).toString());
                                 tObjectRecord = tArray.getJSONObject(i)
                                 ts.append("id:" + tObjectRecord!!.getInt("PR_ID") + " - ")
                                 ts.append("product:" + tObjectRecord.getString("PR_naam") + " - ")
