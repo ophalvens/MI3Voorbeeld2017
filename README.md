@@ -92,15 +92,16 @@ val jsObjRequest = JsonObjectRequest(Request.Method.POST, url, jObj,
     }, Response.ErrorListener { error -> tv_main.text = error.cause.toString() })
 ```
 * *tv_main* Is de TextView waarin we de herwerkte response in plaatsen.
-* Aangezien we hier een String gaan concateneren werken we met een StringBuilder omdat dit meer efficiënt is.
-* In de response zit een JSONArray "data" waarin we alle waarden hebben gestopt op de server.
-* In deze JSONArray zitten JSONObjecten.
+* Aangezien we hier een String gaan concateneren werken we met een *StringBuilder* omdat dit meer efficiënt is qua geheugengebruik.
+* De response zelf is een **JSONObject**.
+* In de response zit in "data" een **JSONArray** waarin we alle nuttige waarden hebben gestopt op de server.
+* In deze JSONArray zitten **JSONObject**en.
 * In deze JSONObjecten zitten waarden met namen zoals *PR_ID*, *PR_naam*, *prijs* (zie voorbeeld Cordova).
 
 De parameters voor deze JsonObjectRequest zijn :
 * de **method**
 * de **uri**
-* de **data** die je meestuurt
+* de **data** die je meestuurt in je request
 * een **Response.Listener** on success (Response.Listener< JSONObject> omdat we een JSONObject verwachten van de server )
 * een **Response.ErrorListener**
 
