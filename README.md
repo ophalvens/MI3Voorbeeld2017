@@ -8,13 +8,13 @@ Dit voorbeeld bouwt verder op het voorbeeld dat in de vorige les
 gebruikt werd (https://github.com/ophalvens/MI3-CordovaVoorbeeld/tree/Stap-5-DATA).
 
 In dit voorbeeld werken we wel met Kotlin in plaats van met
-Java.
+Java. (code: https://github.com/ophalvens/MI3Voorbeeld2017/blob/master/app/src/main/java/net/ophalvens/mi3voorbeeld2017/MainActivity.kt).
 
-Voor wie liever de java-syntax leest, kan de code in het zip-bestand 'MainActivity.zip' interessant zijn. De code in deze readme is ook Kotlin.
+Voor wie liever de java-syntax leest, kan de code in het zip-bestand 'MainActivity.zip' interessant zijn. 
 
 ### Stap 0
-Documentatie over Volley : https://developer.android.com/training/volley/index.html.
-Documentatie over Kotlin : http://kotlinlang.org/docs/tutorials/kotlin-android.html.
+* Documentatie over Volley : https://developer.android.com/training/volley/index.html.
+* Documentatie over Kotlin : http://kotlinlang.org/docs/tutorials/kotlin-android.html.
 
 ### Stap 1 : app.gradle
 In je app.gradle :
