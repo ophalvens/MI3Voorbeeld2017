@@ -12,6 +12,9 @@ Java. (code: https://github.com/ophalvens/MI3Voorbeeld2017/blob/master/app/src/m
 
 Voor wie liever de java-syntax leest, kan de code in het zip-bestand 'MainActivity.zip' interessant zijn. 
 
+### Stap -1
+Dit project is gebaseerd op een nieuwe app, gebaseerd op de  NavigationDrawerActivity setup wizard.
+
 ### Stap 0
 * Documentatie over Volley : https://developer.android.com/training/volley/index.html.
 * Documentatie over Kotlin : http://kotlinlang.org/docs/tutorials/kotlin-android.html.
