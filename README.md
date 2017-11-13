@@ -114,4 +114,16 @@ Om de request effectief uit te kunnen voeren, wil je deze ook aan de queue toevo
 ...
 queue.add(jsObjRequest)
 ```
-
+### Stap 7 : de API aanpassen
+Wat je verstuurt met Volley komt niet in de $_POST of $_GET variabelen van de PHP pagina te staan.
+Om dat op te lossen, kijken we naar de body van de request in de PHP pagina :
+```
+...
+$body = file_get_contents('php://input');
+$postvars = json_decode($body, true);
+$id = $postvars["id"];
+$table = $postvars["table"];
+$bewerking = $postvars["bewerking"];
+...
+```
+Je kan dit in meer detail bekijken in het voorbeeld van de API op https://github.com/ophalvens/MI3-CordovaVoorbeeld/blob/Stap-5-DATA/php/testdb.php .
