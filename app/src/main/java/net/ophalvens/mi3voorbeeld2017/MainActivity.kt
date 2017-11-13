@@ -23,12 +23,6 @@ import com.android.volley.Request.Method.POST
 import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
 
-
-
-
-
-
-
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
