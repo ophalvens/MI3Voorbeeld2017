@@ -35,10 +35,11 @@ Je kan de releases van Volley bekijken op https://github.com/google/volley/relea
 ### Stap 2 : AndroidManifest.xml
 Doordat je internet nodig hebt, moet je aan je manifest ook de *android.permission.INTERNET* toevoegen.
 ```
-dependencies {
+<manifest ...>
   ... 
   <uses-permission android:name="android.permission.INTERNET" />
-}
+  ...
+</manifest>
 ```
 
 ### Stap 3 : RequestQueue en url 
