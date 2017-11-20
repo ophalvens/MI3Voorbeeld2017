@@ -128,3 +128,28 @@ $bewerking = $postvars["bewerking"];
 ...
 ```
 Je kan dit in meer detail bekijken in het voorbeeld van de API op https://github.com/ophalvens/MI3-CordovaVoorbeeld/blob/Stap-5-DATA/php/testdb.php .
+
+
+## Kort voorbeeld om te navigeren naar een ander fragment
+### Navigation Drawer
+Zie https://developer.android.com/training/implementing-navigation/nav-drawer.html
+
+File -> new -> Fragment (blank in dit voorbeeld)
+ * Fragments : https://developer.android.com/training/basics/fragments/index.html
+ * Pas eventueel type het van het fragment aan naar een android.app.Fragment. ( De freagmentManager verwacht een Fragment of een subclass daarvab)
+
+Je main Activity moet de .OnFragmetnInteractionListener van het gemaakte fragment implementeren.
+
+In het voorbeeld reageren we op de knop *nav_manage* die als tekst *Tools* heeft. Dat doen we in de *onNavigationItemSelected* functie :
+```
+R.id.nav_manage -> {
+    val fragment =  ToolsFragment.newInstance("Een", "Twee")
+    val fragmentManager = fragmentManager
+    fragmentManager.beginTransaction()
+            .replace(R.id.mainInclude, fragment)
+            .addToBackStack(null)
+            .commit()
+}
+```
+* *mainInclude* is de ID van het fragment dat we willen vervangen.
+* door *addToBackStack* kan je nadien terug via de back-knop navigeren naar het vorige vragment

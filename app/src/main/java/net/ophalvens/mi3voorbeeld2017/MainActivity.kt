@@ -22,8 +22,14 @@ import org.json.JSONArray
 import com.android.volley.Request.Method.POST
 import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
+import android.R.attr.fragment
+import android.app.Fragment
+import android.net.Uri
+import android.util.Log
 
-class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+
+class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener, ToolsFragment.OnFragmentInteractionListener {
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -111,6 +117,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
     }
 
+    override fun onFragmentInteraction(uri: Uri) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+
+    }
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         // Handle navigation view item clicks here.
         when (item.itemId) {
@@ -124,7 +134,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
             }
             R.id.nav_manage -> {
-
+                val fragment =  ToolsFragment.newInstance("Een", "Twee")
+                val fragmentManager = fragmentManager
+                fragmentManager.beginTransaction()
+                        .replace(R.id.mainInclude, fragment)
+                        .addToBackStack(null)
+                        .commit()
             }
             R.id.nav_share -> {
 
